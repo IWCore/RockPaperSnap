@@ -133,6 +133,12 @@ export default function PlayScreen() {
           </TouchableOpacity>
         ))}
       </View>
+      <TouchableOpacity
+      style = {styles.resetButton}
+      activeOpacity={0.75}
+      onPress={resetGame}>
+        <Text style = {styles.resetText}>Reset Game</Text>
+      </TouchableOpacity>
     </View>
   )
 }
@@ -287,5 +293,20 @@ const styles = StyleSheet.create({
     fontSize: 14,
     fontWeight: '800',
     color: COLORS.text,
+  },
+    resetButton: {
+    marginTop: 18,
+    paddingVertical: 12,
+    paddingHorizontal: 28,
+    borderRadius: 12,
+    borderWidth: 1,
+    borderColor: COLORS.border,
+    backgroundColor: COLORS.surface,
+  },
+  resetText: {
+    fontSize: 14,
+    fontWeight: '800',
+    color: COLORS.secondaryText,
+    letterSpacing: 0.5,
   },
 });
